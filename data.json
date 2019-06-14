@@ -1,0 +1,88 @@
+{
+  "name": "Mark Njung'e",
+  "email": "mark.kamau@outlook.com",
+  "github": "https://github.com/MarkNjunge",
+  "CV": "https://marknjunge.com/Mark Njung'e CV.pdf",
+  "employed": true,
+  "experience": [
+    {
+      "company": "Pi Consulting",
+      "role": "Android Developer",
+      "started": "January 2019"
+    }
+  ],
+  "projects": [
+    {
+      "title": "JustJava",
+      "description": "A sample food delivery application for a coffee shop.",
+      "website": "https://marknjunge.com/justjava",
+      "sourceCode": "https://github.com/MarkNjunge/JustJava-Android",
+      "links": [
+        {
+          "name": "PlayStore",
+          "url": "https://play.google.com/store/apps/details?id=com.marknkamau.justjava"
+        },
+        {
+          "name": "Latest build",
+          "url": "https://skyll.herokuapp.com/justjava?redirect=true"
+        }
+      ],
+      "tags": ["Kotlin", "Firebase", "RxJava", "M-Pesa", "PlayStore"]
+    },
+    {
+      "title": "GlobalGym",
+      "description": "An app that allows users to access any member gym across Africa.",
+      "website": "https://marknjunge.com/globalgym",
+      "sourceCode": "https://github.com/MarkNjunge/GlobalGym-Android",
+      "links": [
+        {
+          "name": "Latest build",
+          "url": "https://skyll.herokuapp.com/globalgym?redirect=true"
+        }
+      ],
+      "tags": ["Node", "Kotlin", "Google maps", "Kiswahili Translation"]
+    },
+    {
+      "title": "Unipool",
+      "description": "A carpooling app that allows members of Strathmore travelling to the institution.",
+      "sourceCode": "https://github.com/MarkNjunge/Unipool-Android",
+      "tags": ["Node", "Kotlin", "GraphQL", "Google Maps", "Ride Sharing"]
+    },
+    {
+      "title": "ams-parse",
+      "description": "A command line application that extracts a student's details from Strathmore University's AMS Student's Module.",
+      "sourceCode": "https://github.com/MarkNjunge/ams-parse",
+      "tags": ["Node.js", "Web Scraping", "Pupetter", "Cheerio"]
+    },
+    {
+      "title": "coords",
+      "description": "A coordinates distance calculator.",
+      "sourceCode": "https://github.com/MarkNjunge/coords",
+      "tags": ["Node.js", "REST", "Coordinates"]
+    },
+    {
+      "title": "GlobalGym-api-ktor",
+      "description": "A rewrite of GlobalGym's API using ktor.",
+      "sourceCode": "https://github.com/MarkNjunge/GlobalGym-api-ktor",
+      "tags": ["Kotlin", "Ktor", "Backend", "PostgreSQL", "JDBI", "VuePress"]
+    },
+    {
+      "title": "Helix",
+      "description": "A Warframe bot for Discord and Slack.",
+      "sourceCode": "https://helix.marknjunge.com",
+      "tags": ["Node", "Discord", "Slack"]
+    },
+    {
+      "title": "MQTT Broker",
+      "description": "An MQTT broker app with data storage in MongoDB. Written in Node.js",
+      "sourceCode": "https://github.com/MarkNjunge/mqtt-broker",
+      "tags": ["Node", "MQTT", "MongoDB", "Mosca"]
+    },
+    {
+      "title": "Parse Network Stats",
+      "description": "A java application that parses multiple network statistics outputs into usable format.",
+      "sourceCode": "https://github.com/MarkNjunge/ParseNetworkStats",
+      "tags": ["Java", "Statistics", "File parsing"]
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+type Experience {
+  company: String!
+  role: String!
+  started: String!
+  finished: String
+}
+
+type Link {
+  name: String!
+  url: String!
+}
+
+type Project {
+  title: String!
+  description: String!
+  website: String
+  sourceCode: String!
+  links: [Link]
+  tags: [String]!
+}
+
+type Repo {
+  name: String!
+  description: String!
+  url: String!
+  language: String!
+}
+
+type Query {
+  name: String!
+  email: String!
+  github: String!
+  CV: String!
+  employed: String!
+  experience: [Experience]!
+  projects: [Project]!
+  repos(count: Int = 5): [Repo]!
+}
