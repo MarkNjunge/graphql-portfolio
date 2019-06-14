@@ -1,7 +1,7 @@
 {
   "name": "graphql-portfolio",
   "version": "1.0.0",
-  "description": "GraphQL version of my porfolio",
+  "description": "Developer portfolio using GraphQL",
   "main": "src/app.js",
   "scripts": {
     "start": "node src/app.js",
