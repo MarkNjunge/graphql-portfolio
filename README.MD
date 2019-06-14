@@ -1,6 +1,6 @@
-# Graphql Porfolio
+# Graphql Portfolio
 
-A GraphQl Porfolio.
+A GraphQL portfolio.
 
 Inspired by [Sara Vieira](https://iamsaravieira.com/)'s portfolio.
 
