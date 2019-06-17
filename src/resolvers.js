@@ -13,7 +13,7 @@ module.exports = {
     CV: () => data.CV,
     employed: () => data.employed,
     experience: () => data.experience,
-    projects: () => data.projects,
+    projects: (parent, { count }) => data.projects.slice(0, count),
     repos: async (parent, { count }) => {
       const query = `
             query { 

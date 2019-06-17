@@ -33,6 +33,6 @@ type Query {
   CV: String!
   employed: String!
   experience: [Experience]!
-  projects: [Project]!
+  projects(count: Int = 5): [Project]!
   repos(count: Int = 5): [Repo]!
 }
