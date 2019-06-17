@@ -1,6 +1,6 @@
 # Graphql Portfolio
 
-A GraphQL portfolio.
+A GraphQL portfolio. Live: https://portfolio.marknjunge.com/
 
 Inspired by [Sara Vieira](https://iamsaravieira.com/)'s portfolio.
 
