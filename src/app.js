@@ -16,7 +16,24 @@ server.context = context;
 const options = {
   port: PORT,
   endpoint: "/graphql",
-  playground: "/"
+  playground: "/",
+  defaultPlaygroundQuery: `
+  # My name is Mark and I am a software developer from Nairobi, Kenya.
+  # I made this GraphQL API as portfolio.
+  # Check out the Docs and here is a sample query.
+  
+  {
+    name
+    email
+    github
+    projects(count: 5) {
+      title
+      description
+      tags
+    }
+  }
+  
+  `
 };
 
 server
