@@ -5,17 +5,8 @@ const data = JSON.parse(
   fs.readFileSync(__dirname + "/../data.json").toString()
 );
 
-module.exports = {
-  Query: {
-    name: () => data.name,
-    email: () => data.email,
-    github: () => data.github,
-    CV: () => data.CV,
-    employed: () => data.employed,
-    experience: () => data.experience,
-    projects: (parent, { count }) => data.projects.slice(0, count),
-    repos: async (parent, { count }) => {
-      const query = `
+async function getGithubRepos(count) {
+  const query = `
             query { 
               viewer { 
                 repositories(first:${count}, orderBy:{field:STARGAZERS, direction:DESC}){
@@ -33,23 +24,36 @@ module.exports = {
               }
             }
       `;
-      const res = await axios.post(
-        "https://api.github.com/graphql",
-        { query },
-        {
-          headers: {
-            Authorization: "bearer " + process.env.GITHUB_TOKEN
-          }
-        }
-      );
 
-      const data = res.data.data;
-      return data.viewer.repositories.nodes.map(node => ({
-        name: node.name,
-        description: node.description,
-        url: node.url,
-        language: node.languages.nodes[0].name
-      }));
+  const res = await axios.post(
+    "https://api.github.com/graphql",
+    { query },
+    {
+      headers: {
+        Authorization: "bearer " + process.env.GITHUB_TOKEN
+      }
     }
+  );
+
+  const data = res.data.data;
+
+  return data.viewer.repositories.nodes.map(node => ({
+    name: node.name,
+    description: node.description,
+    url: node.url,
+    language: node.languages.nodes[0].name
+  }));
+}
+
+module.exports = {
+  Query: {
+    name: () => data.name,
+    email: () => data.email,
+    github: () => data.github,
+    CV: () => data.CV,
+    employed: () => data.employed,
+    experience: () => data.experience,
+    projects: (parent, { count }) => data.projects.slice(0, count),
+    repos: (parent, { count }) => getGithubRepos(count)
   }
 };
