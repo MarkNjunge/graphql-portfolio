@@ -15,6 +15,7 @@ type Project {
   description: String!
   website: String
   sourceCode: String!
+  images: [String]
   links: [Link]
   tags: [String]!
 }

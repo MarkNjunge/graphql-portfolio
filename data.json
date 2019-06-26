@@ -17,6 +17,9 @@
       "description": "A sample food delivery application for a coffee shop.",
       "website": "https://marknjunge.com/justjava",
       "sourceCode": "https://github.com/MarkNjunge/JustJava-Android",
+      "images": [
+        "https://res.cloudinary.com/marknjunge/image/upload/v1561576438/portfolio-images/just-java-small-mockup.png"
+      ],
       "links": [
         {
           "name": "PlayStore",
@@ -34,6 +37,9 @@
       "description": "An app that allows users to access any member gym across Africa.",
       "website": "https://marknjunge.com/globalgym",
       "sourceCode": "https://github.com/MarkNjunge/GlobalGym-Android",
+      "images": [
+        "https://res.cloudinary.com/marknjunge/image/upload/v1561576645/portfolio-images/global-gym-small-mockup.png"
+      ],
       "links": [
         {
           "name": "Latest build",
@@ -46,6 +52,9 @@
       "title": "Unipool",
       "description": "A carpooling app that allows members of Strathmore travelling to the institution.",
       "sourceCode": "https://github.com/MarkNjunge/Unipool-Android",
+      "images": [
+        "https://res.cloudinary.com/marknjunge/image/upload/v1561576646/portfolio-images/unipool-small-mockup.png"
+      ],
       "tags": ["Node", "Kotlin", "GraphQL", "Google Maps", "Ride Sharing"]
     },
     {
