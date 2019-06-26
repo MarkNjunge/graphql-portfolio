@@ -7,22 +7,36 @@ const data = JSON.parse(
 
 async function getGithubRepos(count) {
   const query = `
-            query { 
-              viewer { 
-                repositories(first:${count}, orderBy:{field:STARGAZERS, direction:DESC}){
-                  nodes{
-                    name
-                    description
-                    url
-                    languages(first: 1){
-                      nodes{
-                        name
-                      }
-                    }
-                  }
-                }
-              }
+  {
+    viewer {
+      repositories(first: ${count}, orderBy: {field: STARGAZERS, direction: DESC}) {
+        nodes {
+          name
+          description
+          url
+          stargazers {
+            totalCount
+          }
+          forkCount
+          issues {
+            totalCount
+          }
+          pullRequests(states: [OPEN]) {
+            totalCount
+          }
+          releases {
+            totalCount
+          }
+          languages(first: 5, orderBy: {field: SIZE, direction: DESC}) {
+            nodes {
+              name
+              color
             }
+          }
+        }
+      }
+    }
+  }  
       `;
 
   const res = await axios.post(
@@ -41,7 +55,15 @@ async function getGithubRepos(count) {
     name: node.name,
     description: node.description,
     url: node.url,
-    language: node.languages.nodes[0].name
+    stars: node.stargazers.totalCount,
+    forks: node.forkCount,
+    issues: node.issues.totalCount,
+    pullRequests: node.pullRequests.totalCount,
+    releases: node.releases.totalCount,
+    languages: node.languages.nodes.map(lang => ({
+      name: lang.name,
+      color: lang.color
+    }))
   }));
 }
 

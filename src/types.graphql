@@ -24,7 +24,17 @@ type Repo {
   name: String!
   description: String!
   url: String!
-  language: String!
+  stars: Int!
+  forks: Int!
+  issues: Int!
+  pullRequests: Int!
+  releases: Int!
+  languages: [Language]!
+}
+
+type Language {
+  name: String!
+  color: String
 }
 
 type Query {
