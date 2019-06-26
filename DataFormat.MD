@@ -1,6 +1,7 @@
 # Data Format
 
 `!` - Not null i.e required
+
 `[type]` - Array of _type_
 
 ## General Profile Information
