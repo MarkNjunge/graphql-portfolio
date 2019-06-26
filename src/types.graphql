@@ -32,7 +32,7 @@ type Query {
   email: String!
   github: String!
   CV: String!
-  employed: String!
+  employed: Boolean!
   experience: [Experience]!
   projects(count: Int = 5): [Project]!
   repos(count: Int = 5): [Repo]!
