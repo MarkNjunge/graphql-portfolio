@@ -12,9 +12,9 @@ Inspired by [Sara Vieira](https://iamsaravieira.com/)'s portfolio.
 git clone https://github.com/MarkNjunge/graphql-portfolio
 ```
 
-- Modify _data.json_
+- Modify [data.json](./data.json). See [DataFormat.MD](./DataFormat.MD) for more info.
 
-- Create a _.env_ file based on _.env.sample_
+- Create a _.env_ file based on [.env.sample](./.env.sample)
 
 ```bash
 cp .env.sample .env
