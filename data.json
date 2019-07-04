@@ -64,6 +64,13 @@
       "tags": ["Node.js", "Web Scraping", "Pupetter", "Cheerio"]
     },
     {
+      "title": "GraphQL Portfolio",
+      "description": "A GraphQL portfolio",
+      "website": "https://portfolio.marknjunge.com",
+      "sourceCode": "https://github.com/MarkNjunge/graphql-portfolio",
+      "tags": ["GraphQL", "Portfolio", "Node.js", "graphql-yoga"]
+    },
+    {
       "title": "coords",
       "description": "A coordinates distance calculator.",
       "sourceCode": "https://github.com/MarkNjunge/coords",
