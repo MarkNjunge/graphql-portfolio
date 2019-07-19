@@ -15,9 +15,9 @@ type Project {
   description: String!
   website: String
   sourceCode: String!
-  images: [String]
+  images: [String!]
   links: [Link]
-  tags: [String]!
+  tags: [String!]!
 }
 
 type Repo {
@@ -29,7 +29,7 @@ type Repo {
   issues: Int!
   pullRequests: Int!
   releases: Int!
-  languages: [Language]!
+  languages: [Language!]!
 }
 
 type Language {
