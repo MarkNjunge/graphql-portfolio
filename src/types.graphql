@@ -47,4 +47,5 @@ type Query {
   projects(count: Int = 5): [Project]!
   project(title: String!): Project!
   repos(count: Int = 5): [Repo]!
+  repo(name: String!): Repo!
 }

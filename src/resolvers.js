@@ -1,4 +1,4 @@
-const { data, getGithubRepos } = require("./lib");
+const { data, getGithubRepos, getSingleGithubRepo } = require("./lib");
 
 module.exports = {
   Query: {
@@ -17,6 +17,7 @@ module.exports = {
         return project;
       }
     },
-    repos: (_, { count }) => getGithubRepos(count)
+    repos: (_, { count }) => getGithubRepos(count),
+    repo: (_, { name }) => getSingleGithubRepo(name)
   }
 };
