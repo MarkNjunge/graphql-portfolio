@@ -45,5 +45,6 @@ type Query {
   employed: Boolean!
   experience: [Experience]!
   projects(count: Int = 5): [Project]!
+  project(title: String!): Project!
   repos(count: Int = 5): [Repo]!
 }
