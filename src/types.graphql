@@ -44,8 +44,8 @@ type Query {
   CV: String!
   employed: Boolean!
   experience: [Experience]!
-  projects(count: Int = 5): [Project]!
+  projects(count: Int = 5): [Project!]!
   project(title: String!): Project!
-  repos(count: Int = 5): [Repo]!
+  repos(count: Int = 5): [Repo!]!
   repo(name: String!): Repo!
 }
