@@ -22,7 +22,7 @@ type Project {
 
 type Repo {
   name: String!
-  description: String!
+  description: String
   url: String!
   stars: Int!
   forks: Int!
