@@ -1,6 +1,7 @@
 type Experience {
   company: String!
   role: String!
+  roleDescription: String
   started: String!
   finished: String
 }
@@ -41,8 +42,11 @@ type Query {
   name: String!
   email: String!
   github: String!
-  CV: String!
+  website: String
+  linkedin: String
+  cv: String
   employed: Boolean!
+  otherLinks: [Link!]
   experience: [Experience]!
   projects(count: Int = 5): [Project!]!
   project(title: String!): Project!

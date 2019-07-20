@@ -10,8 +10,11 @@
 name: String!
 email: String!
 github: String!
-CV: String!
+website: String
+linkedin: String
+cv: String
 employed: Boolean!
+otherLinks: [Link!]
 ```
 
 Example
@@ -21,8 +24,16 @@ Example
   "name": "Your Name",
   "email": "your.name@email.com",
   "github": "https://github.com/YourProfile",
-  "CV": "https://domain.com/your_cv_resume.pdf",
+  "website": "https://yourwebsite.com",
+  "linkedin": "https://linkedin.com/in/yourname",
+  "cv": "https://domain.com/your_cv_resume.pdf",
   "employed": true,
+  "otherLinks": [
+    {
+      "name": "Site Name",
+      "url": "https://site.com"
+    }
+  ]
 }
 ```
 
@@ -33,6 +44,7 @@ Work Experience
 ```Graphql
 company: String!
 role: String!
+roleDescription: String
 started: String! # Date. In whatever format.
 finished: String # Date. In whatever format.
 ```
@@ -45,7 +57,9 @@ Example
     {
       "company": "Company Name",
       "role": "Software Developer",
-      "started": "January 2019"
+      "roleDescription" : "At Company name I worked on ...",
+      "started": "January 2019",
+      "finished": "February 2019"
     }
   ]
 }
