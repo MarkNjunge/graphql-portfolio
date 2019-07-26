@@ -20,7 +20,7 @@ steps:
         "--platform",
         "managed",
         "--update-env-vars",
-        "GITHUB_TOKEN=${_GITHUB_TOKEN}",
+        "GITHUB_TOKEN=${_GITHUB_TOKEN},PROFILE_INFO_URL=${_PROFILE_INFO_URL}",
       ]
 images:
   - gcr.io/$PROJECT_ID/graphql-portfolio

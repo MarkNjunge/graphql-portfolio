@@ -1,9 +1,4 @@
-const fs = require("fs");
 const axios = require("axios").default;
-
-const data = JSON.parse(
-  fs.readFileSync(__dirname + "/../data.json").toString()
-);
 
 async function getGithubRepos(count) {
   const query = `
@@ -23,24 +18,22 @@ async function getGithubRepos(count) {
 }
 
 async function getSingleGithubRepo(name) {
-  const ghUsername = getGithubUsername();
   const query = `
   {
-    repository(owner: "${ghUsername}", name: "${name}"){
-      ${repoFields}
+    viewer {
+      repository(name: "${name}") {
+        ${repoFields}
+      }
     }
   }
   `;
 
-  try {
-    const data = await makeRequest(query);
-    return repoFieldsToObject(data.repository);
-  } catch (e) {
-    if (e[0].type == "NOT_FOUND") {
-      throw Error(`Repository '${name}' does not exist!`);
-    } else {
-      throw Error(e[0].message);
-    }
+  const data = await makeRequest(query);
+  const repo = data.viewer.repository;
+  if (repo == null) {
+    throw Error(`Repository '${name}' does not exist!`);
+  } else {
+    return repoFieldsToObject(repo);
   }
 }
 
@@ -68,11 +61,6 @@ const repoFields = `
       }
     }
 `;
-
-function getGithubUsername() {
-  const splits = data.github.split("/");
-  return splits[splits.length - 1];
-}
 
 async function makeRequest(query) {
   const res = await axios.post(
@@ -112,7 +100,6 @@ function repoFieldsToObject(node) {
 }
 
 module.exports = {
-  data,
   getGithubRepos,
   getSingleGithubRepo
 };
