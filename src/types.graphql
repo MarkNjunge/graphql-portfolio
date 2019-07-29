@@ -47,7 +47,7 @@ type Query {
   cv: String
   employed: Boolean!
   otherLinks: [Link!]
-  experience: [Experience]!
+  experience: [Experience!]
   projects(count: Int = 5): [Project!]!
   project(title: String!): Project!
   repos(count: Int = 5): [Repo!]!
