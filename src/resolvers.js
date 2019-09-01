@@ -3,6 +3,10 @@ const axios = require("axios").default;
 
 var profileInfo = {};
 (async () => {
+  await fetchProfileData();
+})();
+
+async function fetchProfileData() {
   try {
     const dataFileUrl = process.env.PROFILE_INFO_URL;
     if (!dataFileUrl) {
@@ -17,7 +21,7 @@ var profileInfo = {};
     console.error(`Unable to fetch profile info: ${e.message}`);
     process.exit();
   }
-})();
+}
 
 module.exports = {
   Query: {
@@ -41,5 +45,11 @@ module.exports = {
     },
     repos: (_, { count }) => getGithubRepos(count),
     repo: (_, { name }) => getSingleGithubRepo(name)
+  },
+  Mutation: {
+    refreshData: async () => {
+      await fetchProfileData();
+      return true;
+    }
   }
 };

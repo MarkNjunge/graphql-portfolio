@@ -53,3 +53,7 @@ type Query {
   repos(count: Int = 5): [Repo!]!
   repo(name: String!): Repo!
 }
+
+type Mutation {
+  refreshData: Boolean!
+}
