@@ -12,8 +12,7 @@ Inspired by [Sara Vieira](https://iamsaravieira.com/)'s portfolio.
 git clone https://github.com/MarkNjunge/graphql-portfolio
 ```
 
-2. Create a JSON file with your details. See [DataFormat.MD](./DataFormat.MD) for more info or a [complete example](https://gist.githubusercontent.com/MarkNjunge/4842ad56c7eb01bcf281013a25798fb2/raw/4d79607fb0d9e3a4e1a6283be0fc9d29d638d1b2/data.json).  
-   Creating a gist for this is the best option. Make sure the url you provide is the **RAW URL**, not the webpage url.
+2. Create a JSON file with your details. See [DataFormat.MD](./DataFormat.MD) for more info or a [complete example](https://marknjunge.com/profile-data.json).
 
 3. Create a _.env_ file based on [.env.sample](./.env.sample)
 
