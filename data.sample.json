@@ -1,0 +1,46 @@
+{
+  "name": "Your Name",
+  "email": "your.name@email.com",
+  "github": "https://github.com/YourProfile",
+  "website": "https://yourwebsite.com",
+  "linkedin": "https://linkedin.com/in/yourname",
+  "cv": "https://domain.com/your_cv_resume.pdf",
+  "seekingEmployment": true,
+  "otherLinks": [
+    {
+      "name": "Site Name",
+      "url": "https://site.com"
+    }
+  ],
+  "experience": [
+    {
+      "company": "Company Name",
+      "role": "Software Developer",
+      "roleDescription" : "At Company name I worked on ...",
+      "started": "January 2019",
+      "finished": "February 2019"
+    }
+  ],
+  "projects": [
+    {
+      "title": "Just Java",
+      "description": "A sample food delivery application for a coffee shop.",
+      "website": "https://marknjunge.com/justjava",
+      "sourceCode": "https://github.com/MarkNjunge/JustJava-Android",
+      "images": [
+        "https://res.cloudinary.com/marknjunge/image/upload/v1561576438/portfolio-images/just-java-small-mockup.png"
+      ],
+      "links": [
+        {
+          "name": "PlayStore",
+          "url": "https://play.google.com/store/apps/details?id=com.marknkamau.justjava"
+        },
+        {
+          "name": "Latest build",
+          "url": "https://skyll.herokuapp.com/justjava?redirect=true"
+        }
+      ],
+      "tags": ["Kotlin", "Firebase", "RxJava", "M-Pesa", "PlayStore"]
+    }
+  ]
+}

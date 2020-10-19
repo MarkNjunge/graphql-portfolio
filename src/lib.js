@@ -68,7 +68,7 @@ async function makeRequest(query) {
     { query },
     {
       headers: {
-        Authorization: "bearer " + process.env.GITHUB_TOKEN
+        Authorization: "Bearer " + process.env.GITHUB_TOKEN
       }
     }
   );

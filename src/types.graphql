@@ -45,15 +45,11 @@ type Query {
   website: String
   linkedin: String
   cv: String
-  employed: Boolean!
+  seekingEmployment: Boolean!
   otherLinks: [Link!]
   experience: [Experience!]
   projects(count: Int = 5): [Project!]!
   project(title: String!): Project!
   repos(count: Int = 5): [Repo!]!
   repo(name: String!): Repo!
-}
-
-type Mutation {
-  refreshData: Boolean!
 }

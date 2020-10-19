@@ -1,27 +1,5 @@
 const { getGithubRepos, getSingleGithubRepo } = require("./lib");
-const axios = require("axios").default;
-
-var profileInfo = {};
-(async () => {
-  await fetchProfileData();
-})();
-
-async function fetchProfileData() {
-  try {
-    const dataFileUrl = process.env.PROFILE_INFO_URL;
-    if (!dataFileUrl) {
-      throw Error("PROFILE_INFO_URL not specified in environment");
-    }
-
-    const res = await axios.get(dataFileUrl);
-    profileInfo = res.data;
-
-    console.log("Fetched profile info");
-  } catch (e) {
-    console.error(`Unable to fetch profile info: ${e.message}`);
-    process.exit();
-  }
-}
+const profileInfo = require("../data.json")
 
 module.exports = {
   Query: {
@@ -31,7 +9,7 @@ module.exports = {
     website: () => profileInfo.website,
     linkedin: () => profileInfo.linkedin,
     cv: () => profileInfo.cv,
-    employed: () => profileInfo.employed,
+    seekingEmployment: () => profileInfo.seekingEmployment,
     otherLinks: () => profileInfo.otherLinks,
     experience: () => profileInfo.experience,
     projects: (_, { count }) => profileInfo.projects.slice(0, count),
@@ -46,10 +24,4 @@ module.exports = {
     repos: (_, { count }) => getGithubRepos(count),
     repo: (_, { name }) => getSingleGithubRepo(name)
   },
-  Mutation: {
-    refreshData: async () => {
-      await fetchProfileData();
-      return true;
-    }
-  }
 };

@@ -6,14 +6,14 @@
 
 ## General Profile Information
 
-```Graphql
+```raphql
 name: String!
 email: String!
 github: String!
 website: String
 linkedin: String
 cv: String
-employed: Boolean!
+seekingEmployment: Boolean!
 otherLinks: [Link!]
 ```
 
@@ -27,7 +27,7 @@ Example
   "website": "https://yourwebsite.com",
   "linkedin": "https://linkedin.com/in/yourname",
   "cv": "https://domain.com/your_cv_resume.pdf",
-  "employed": true,
+  "seekingEmployment": true,
   "otherLinks": [
     {
       "name": "Site Name",
